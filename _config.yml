@@ -26,21 +26,75 @@ subtitle                : "Every day is a chance to learn!"
 name                    : "bgx4k3p"
 description             : "Development Test Site"
 
-baseurl                 : "/wiki" # the subpath of your site, e.g. /blog
+baseurl                 : "/blog" # the subpath of your site, e.g. /blog
 url                     : "https://bgx4k3p.github.io" # the base hostname for your site, e.g. http://example.com
 twitter_username: bgx4k3p
 github_username: bgx4k3p
 repository: bgx4k3p/wiki
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
-
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
+
+author:
+  name: "bgx4k3p"
+  avatar: "/assets/images/bio-photo.png"
+  bio: "
+       
+       " # Note: Markdown is allowed
+  # location: "Somewhere"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bgx4k3p"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/bgx4k3p"
+
+# Layout
+layout: single
+search: true
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      # classes: wide
+      toc: true
+      toc_label: "Content"
+      toc_icon: "file-alt"
+      toc_sticky: "false"
+      author_profile: true
+      read_time: false
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      classes: wide
+      #toc: true
+      #toc_label: "Content"
+      #toc_icon: "file-alt"
+      #toc_sticky: "false"
+      author_profile: true
+      read_time: false
+      comments: true
+      share: true
+      related: true
+
+# Include from processing.
+include: ["_pages"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
