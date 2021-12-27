@@ -33,7 +33,7 @@ github_username: bgx4k3p
 repository: bgx4k3p/wiki
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
 markdown: kramdown
 plugins:
