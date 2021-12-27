@@ -36,7 +36,7 @@ search                  : true
 
 # Build settings
 remote_theme            : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin   : "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
+minimal_mistakes_skin   : "air" # "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
 markdown                : kramdown
 plugins:
   - jekyll-github-metadata
