@@ -38,6 +38,7 @@ search                  : true
 remote_theme            : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin   : "air" #  "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
 markdown                : kramdown
+
 plugins:
   - jekyll-github-metadata
   - jekyll-seo-tag
