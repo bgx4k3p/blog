@@ -28,14 +28,16 @@ description             : "Development Test Site"
 
 baseurl                 : "/blog" # the subpath of your site, e.g. /blog
 url                     : "https://bgx4k3p.github.io" # the base hostname for your site, e.g. http://example.com
-twitter_username: bgx4k3p
-github_username: bgx4k3p
-repository: bgx4k3p/wiki
+twitter_username        : bgx4k3p
+github_username         : bgx4k3p
+repository              : bgx4k3p/wiki
+search                  : true
+timezone                : America/New_York
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
-markdown: kramdown
+remote_theme            : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin   : "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
+markdown                : kramdown
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
@@ -58,7 +60,6 @@ author:
 
 # Layout
 layout: single
-search: true
 defaults:
   # _posts
   - scope:
