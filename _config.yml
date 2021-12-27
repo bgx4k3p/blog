@@ -31,8 +31,9 @@ url                     : "https://bgx4k3p.github.io" # the base hostname for yo
 twitter_username        : bgx4k3p
 github_username         : bgx4k3p
 repository              : bgx4k3p/wiki
-search                  : true
+github                  : [metadata]
 timezone                : America/New_York
+search                  : true
 
 # Build settings
 remote_theme            : "mmistakes/minimal-mistakes"
