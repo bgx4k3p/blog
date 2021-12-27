@@ -31,7 +31,6 @@ url                     : "https://bgx4k3p.github.io" # the base hostname for yo
 twitter_username        : bgx4k3p
 github_username         : bgx4k3p
 repository              : bgx4k3p/wiki
-github                  : [metadata]
 timezone                : America/New_York
 search                  : true
 
@@ -40,9 +39,22 @@ remote_theme            : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin   : "default" # "dark" # "air", "aqua", "contrast", "dirt", "neon", "mint", "plum" "sunrise"
 markdown                : kramdown
 plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-remote-theme
 
 author:
   name: "bgx4k3p"
