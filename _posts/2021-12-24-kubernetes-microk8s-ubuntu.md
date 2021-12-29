@@ -1,11 +1,10 @@
 ---
 title: "Setup MicroK8s cluster on Ubuntu 21.04"
 categories: linux
-tags: setup kubernetes ubuntu microk8s
+tags: how-to kubernetes ubuntu microk8s
 ---
 
-How to setup MicroK8s cluster on Ubuntu 21.04
-======
+# How to setup MicroK8s cluster on Ubuntu 21.04
 
 ## 1. Install MicroK8s and Kubectl
 
