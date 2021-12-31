@@ -4,7 +4,8 @@ categories: assembly
 tags: assembly programming
 ---
 
-### HLA Program template
+**HLA Program template**
+
 ```bash
 program pgmID ;
 

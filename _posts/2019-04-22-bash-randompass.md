@@ -4,7 +4,7 @@ categories: linux
 tags: linux bash programming
 ---
 
-# Quick script to generate random passwords
+Quick script to generate random passwords
 
 ## Use Bash function (for learning purposes)
 ```bash
