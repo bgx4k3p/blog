@@ -96,6 +96,8 @@ defaults:
       comments: true
       share: true
       related: true
+      #header:
+      #  image: ./assets/images/banner-1280x200.png
   # _pages
   - scope:
       path: ""

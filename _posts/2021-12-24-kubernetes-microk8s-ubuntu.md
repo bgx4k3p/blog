@@ -1,7 +1,7 @@
 ---
 title: "Setup MicroK8s cluster on Ubuntu 21.04"
 categories: linux
-tags: how-to kubernetes ubuntu microk8s
+tags: linux how-to kubernetes ubuntu microk8s
 ---
 
 # How to setup MicroK8s cluster on Ubuntu 21.04
