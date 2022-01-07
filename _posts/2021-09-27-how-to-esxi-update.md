@@ -22,7 +22,7 @@ esxcli system maintenanceMode get
 esxcli network firewall ruleset set -e true -r httpClient
 ```
 
-## 2. Get al ist of all available ESXi profiles  
+## 3. Get al ist of all available ESXi profiles  
 
 ```bash
 esxcli software sources profile list --depot=https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml |grep ESXi
