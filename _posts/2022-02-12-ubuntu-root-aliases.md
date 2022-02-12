@@ -8,13 +8,13 @@ How to add useful BASH aliases for root user on Ubuntu
 
 ## 1. Switch to root user
 
-Any user with SUDO privileges can be used as well, instead of root, it's a matter of preference.
+Any user with SUDO privileges can be used as well, it's a matter of preference.
 
 ```bash
 sudo su
 ```
 
-## 2. Create bash_aliases file under the root user
+## 2. Create .bash_aliases file under the root user home folder
 
 ```bash
 # Updates
