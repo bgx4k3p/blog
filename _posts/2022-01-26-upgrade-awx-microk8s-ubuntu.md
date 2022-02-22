@@ -13,7 +13,7 @@ Find the latest version of AWX Operator: https://github.com/ansible/awx-operator
 ```bash
 # Pull the latest version from GIT
 cd ~/awx-operator
-git checkout 0.16.0
+git checkout 0.17.0
 ```
 
 ## 2. Upgrade AWX Operator
@@ -51,11 +51,11 @@ AWX Operator will upgrade AWX Tower automatically. It is important to have enoug
 
 ```bash
 ansible@microk8s:~/awx-operator$ kubectl get pods -n $NAMESPACE
-NAME                                               READY   STATUS    RESTARTS        AGE
-awx-postgres-0                                     1/1     Running   13 (2d3h ago)   39d
-awx-7d4f664875-7gvxz                               4/4     Running   56 (47h ago)    39d
-awx-operator-controller-manager-6795f9f5f5-fxvd6   2/2     Running   0               96s
-awx-75486fdfb8-m2l9q                               0/4     Pending   0               48s
+NAME                                               READY   STATUS            RESTARTS       AGE
+awx-postgres-0                                     1/1     Running           20 (15d ago)   63d
+awx-75486fdfb8-m2l9q                               4/4     Running           20 (15d ago)   23d
+awx-operator-controller-manager-775b5cfc56-r6f6m   2/2     Running           0              75s
+awx-6976457bd5-4gcqn                               0/4     PodInitializing   0              25s
 ```
 
 Optional: Open another terminal to monitor the install live
@@ -63,4 +63,3 @@ Optional: Open another terminal to monitor the install live
 ```bash
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 ```
-
