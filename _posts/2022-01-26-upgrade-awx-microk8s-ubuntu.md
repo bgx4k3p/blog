@@ -13,7 +13,8 @@ Find the latest version of AWX Operator: https://github.com/ansible/awx-operator
 ```bash
 # Pull the latest version from GIT
 cd ~/awx-operator
-git checkout 0.17.0
+git pull
+git checkout 0.23.0
 ```
 
 ## 2. Upgrade AWX Operator
