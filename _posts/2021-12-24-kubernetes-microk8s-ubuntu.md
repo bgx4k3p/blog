@@ -89,8 +89,11 @@ EOF
 
 microk8s kubectl apply -f adminuser-rolebinding.yaml
 
-# Copy the Token
+# Copy the Token for MicroK8s 1.23 or older
 microk8s kubectl -n kube-system describe secret $(microk8s kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') | grep token
+
+# Copy the for MicroK8s 1.24 or newer
+microk8s kubectl create token default
 
 ```
 
