@@ -45,8 +45,8 @@ Finished. Total time: 2.609s
 
 
 ### References:
-https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/
+[https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/](https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/)
 
-https://www.droidwin.com/temporarily-root-android-via-magisk
+[https://www.droidwin.com/temporarily-root-android-via-magisk](https://www.droidwin.com/temporarily-root-android-via-magisk)
 
 

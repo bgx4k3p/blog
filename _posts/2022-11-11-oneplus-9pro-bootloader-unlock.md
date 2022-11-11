@@ -1,7 +1,7 @@
 ---
 title: OnePlus 9 Pro - Bootloader Unlock
-categories: android linux
-tags: linux android root oneplus 9pro bootloader unlock
+categories: android
+tags: android root oneplus 9pro bootloader unlock
 ---
 
 ## Step 1. Install Android tools
@@ -93,14 +93,14 @@ Finished. Total time: 0.034s
 ## References
 
 ### Guides: 
-https://www.oneplus.com/support/answer/detail/op588
+[https://www.oneplus.com/support/answer/detail/op588](https://www.oneplus.com/support/answer/detail/op588)
 
 ###  Unbrick
-https://forum.xda-developers.com/t/op9pro-repository-of-msm-unbrick-tools-tmo-eu-glo-in.4272549/
+[https://forum.xda-developers.com/t/op9pro-repository-of-msm-unbrick-tools-tmo-eu-glo-in.4272549/](https://forum.xda-developers.com/t/op9pro-repository-of-msm-unbrick-tools-tmo-eu-glo-in.4272549/)
 
-https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_9_Pro
+[https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_9_Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_9_Pro)
 
 
 ### OEM Unlocking Grayed out
-https://www.droidwin.com/enable-greyed-out-oem-unlock-in-oneplus-carrier-locked-t-mobile/#How_to_Enable_Greyed_out_OEM_Unlock_in_OnePlus_Carrier_Locked_T-Mobile
+[https://www.droidwin.com/enable-greyed-out-oem-unlock-in-oneplus-carrier-locked-t-mobile/#How_to_Enable_Greyed_out_OEM_Unlock_in_OnePlus_Carrier_Locked_T-Mobile](https://www.droidwin.com/enable-greyed-out-oem-unlock-in-oneplus-carrier-locked-t-mobile/#How_to_Enable_Greyed_out_OEM_Unlock_in_OnePlus_Carrier_Locked_T-Mobile)
 
