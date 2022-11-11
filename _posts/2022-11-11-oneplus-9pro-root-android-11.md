@@ -1,11 +1,15 @@
 ---
-title: OnePlus 9 Pro - Root Android 11
+title: OnePlus 9 Pro - Root Android
 categories: android linux
 tags: linux android root oneplus 9pro
 ---
 
+How to Root OnePlus 9 Pro device
+
 ## Step 1. Install Android 11 Global LE15AA
 The latest Android 11 Global ROM should be LE15AA_11.2.10.10
+
+* The same process will work for any other Android version, just need to match the Magisked boot image.
 
 ## Step 2. Unlock bootloader if you haven't
 1. This step will erase the phone entirely
@@ -16,7 +20,7 @@ The latest Android 11 Global ROM should be LE15AA_11.2.10.10
 
 OOS 11.2.10.10 boot : Untouched/Magisked (AA)
 
-https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/
+[https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/](https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/)
 
 ## Step 4. Boot with temporary Root access
 
@@ -48,5 +52,3 @@ Finished. Total time: 2.609s
 [https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/](https://forum.xda-developers.com/t/guide-magisk-unlock-root-keep-root-oos-13-f-16.4252373/)
 
 [https://www.droidwin.com/temporarily-root-android-via-magisk](https://www.droidwin.com/temporarily-root-android-via-magisk)
-
-
