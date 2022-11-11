@@ -4,6 +4,8 @@ categories: android
 tags: android root oneplus 9pro le2127 le2125
 ---
 
+How to convert T-Mobile OnePlus 9 Pro branded device to Global
+
 **OnePlus 9 Pro Device models**
 
 T-Mobile branded OnePlus 9 Pro (LE2127) devices have known issues with Modem and losing 5G if the conversion is not done in the right order. This guide covers the process to convert to NA/Global (LE2125) and prevent modem issues. Global version allows for keeping with the latest updates from OnePlus One and are easier to Root if needed.
