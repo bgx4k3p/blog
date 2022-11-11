@@ -1,7 +1,7 @@
 ---
 title: OnePlus 9 Pro - Root Android
-categories: android linux
-tags: linux android root oneplus 9pro
+categories: android
+tags: android root oneplus 9pro
 ---
 
 How to Root OnePlus 9 Pro device
