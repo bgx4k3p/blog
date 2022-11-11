@@ -107,18 +107,18 @@ This is the highest Android 11 version before going to Android 12. It needs to b
 After this procedure, it is save to update to Android 12 and 13 ROMs. 
 
 ## References
-### Guides:
+### Guides
 [https://forum.xda-developers.com/t/tmo-9-pro-modem-retention-data-fix.4292445/](https://forum.xda-developers.com/t/tmo-9-pro-modem-retention-data-fix.4292445/)
 
 [https://forum.xda-developers.com/t/convert-your-t-mobile-le2127-to-eu-via-msm-no-unlock-bin-needed.4272837/](https://forum.xda-developers.com/t/convert-your-t-mobile-le2127-to-eu-via-msm-no-unlock-bin-needed.4272837/)
 
-### Signed ROMs:
+### Signed ROMs
 [https://forum.xda-developers.com/t/oneplus-9-pro-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4254587](https://forum.xda-developers.com/t/oneplus-9-pro-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4254587)
 
 ### Bootloader Unlock
 [https://bgx4k3p.github.io/blog/android/linux/2022/11/11/oneplus-9pro-bootloader-unlock.html](https://bgx4k3p.github.io/blog/android/linux/2022/11/11/oneplus-9pro-bootloader-unlock.html)
 
-### Root:
+### Root
 [https://bgx4k3p.github.io/blog/android/linux/2022/11/11/oneplus-9pro-root-android-11.html](https://bgx4k3p.github.io/blog/android/linux/2022/11/11/oneplus-9pro-root-android-11.html)
 
 ### TWRP
