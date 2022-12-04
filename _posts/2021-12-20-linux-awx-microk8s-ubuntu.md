@@ -11,13 +11,13 @@ How to install MicroK8s and Kubectl on Ubuntu 21.04
 
 Make sure to have over 6Gb RAM and 4CPUs! AWX won't install properly otherwise.
 
-## 2. Enable Required AddOns 
+## 2. Enable Required AddOns
 
 ```bash
 microk8s enable dns storage ingress rbac
 ```
 
-## 3. Install AWX Operator 
+## 3. Install AWX Operator
 
 ```bash
 # Dependencies
@@ -37,9 +37,7 @@ make deploy
 kubectl get pods -n $NAMESPACE
 ```
 
-
-## 4. Install AWX 
-
+## 4. Install AWX
 
 ```bash
 # Switch to the AWX namespace
@@ -72,6 +70,7 @@ kubectl get pods -n $NAMESPACE
 ```
 
 Example:
+
 ```bash
 ansible@microk8s:~$ kubectl get --all-namespaces pods
 NAMESPACE     NAME                                               READY   STATUS    RESTARTS   AGE
@@ -81,8 +80,7 @@ awx           awx-postgres-0                                     1/1     Running
 
 ```
 
-
-## 5. Port Forward 
+## 5. Port Forward
 
 ```bash
 # Find the Port/IP
@@ -93,8 +91,7 @@ microk8s kubectl port-forward -n awx service/awx-service 31850:80 --address 0.0.
 
 ```
 
-
-## 6. Login AWX 
+## 6. Login AWX
 
 ```bash
 # Get the Admin password

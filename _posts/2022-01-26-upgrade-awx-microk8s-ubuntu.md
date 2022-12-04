@@ -4,11 +4,11 @@ categories: linux
 tags: awx linux how-to kubernetes ubuntu microk8s
 ---
 
-How to upgrade AWX with MicroK8s clusters on Ubuntu 21.04
+How to upgrade AWX with MicroK8s clusters on Ubuntu 22.04
 
 ## 1. Pull the Latest AWX Operator
 
-Find the latest version of AWX Operator: https://github.com/ansible/awx-operator/releases 
+Find the latest version of AWX Operator: <https://github.com/ansible/awx-operator/releases>
 
 ```bash
 # Pull the latest version from GIT
@@ -28,6 +28,7 @@ ansible@microk8s:~/awx-operator$ make deploy
 ```
 
 Example results:
+
 ```bash
 namespace/awx unchanged
 customresourcedefinition.apiextensions.k8s.io/awxbackups.awx.ansible.com unchanged

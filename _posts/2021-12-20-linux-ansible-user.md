@@ -6,20 +6,19 @@ tags: linux ansible ubuntu awx
 
 Quick guide to add new user for Ansible AWX
 
-## 1. Add Ansible user 
+## 1. Add Ansible user
 
 ```bash
 sudo useradd -m -s /bin/bash ansible
 ```
 
-## 2. SUDO without password 
+## 2. SUDO without password
 
 ```bash
 echo "ansible ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
 ```
 
-## 3. Add your Public SSH key 
-
+## 3. Add your Public SSH key
 
 ```bash
 sudo mkdir /home/ansible/.ssh
@@ -33,8 +32,8 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVt4bIndLhMKLTatW7vGKMB/rAOsZGXwyGKv
 sudo chown -R ansible:ansible /home/ansible/
 sudo chmod 700 /home/ansible/.ssh
 ```
-## 5. Disable Password login 
 
+## 5. Disable Password login
 
 ```bash
 sudo usermod -L ansible
