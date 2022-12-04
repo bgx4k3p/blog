@@ -1,11 +1,11 @@
 ---
-title: Install AWX with MicroK8s Cluster on Ubuntu 21.04
+title: Install AWX with MicroK8s Cluster on Ubuntu 22.04
 categories: linux
 tags: linux awx kubernetes cluster microk8s ubuntu
 ---
 
 
-How to install MicroK8s and Kubectl on Ubuntu 21.04
+How to install MicroK8s and Kubectl on Ubuntu 22.04
 
 ## 1. Prerequisites
 
@@ -27,7 +27,7 @@ sudo apt-get install -y git make
 cd ~
 git clone https://github.com/ansible/awx-operator.git
 cd awx-operator
-git checkout 0.15.0
+git checkout 1.1.1
 
 # Deploy AWX Operator
 export NAMESPACE=awx
@@ -86,7 +86,7 @@ awx           awx-postgres-0                                     1/1     Running
 # Find the Port/IP
 kubectl get service -A
 
-# Port Forward
+# Port Forward (Optional)
 microk8s kubectl port-forward -n awx service/awx-service 31850:80 --address 0.0.0.0 &> /dev/null &
 
 ```
@@ -97,3 +97,5 @@ microk8s kubectl port-forward -n awx service/awx-service 31850:80 --address 0.0.
 # Get the Admin password
 echo Username: admin$'\n'Password: `kubectl  get secret awx-admin-password -o jsonpath='{.data.password}' | base64 --decode`
 ```
+
+Login: <http://x.x.x.x:30080>

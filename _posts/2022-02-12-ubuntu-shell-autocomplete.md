@@ -36,4 +36,4 @@ sudo cp -f /root/.inputrc /home/ansible/.inputrc
 ```bash
 sudo chown ansible:ansible /home/ansible/.inputrc
 sudo chown bgx4k3p:bgx4k3p /home/bgx4k3p/.inputrc
-```
+``

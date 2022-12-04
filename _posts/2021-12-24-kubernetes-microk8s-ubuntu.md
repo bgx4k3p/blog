@@ -1,10 +1,10 @@
 ---
-title: "Setup MicroK8s cluster on Ubuntu 21.04"
+title: "Setup MicroK8s cluster on Ubuntu 22.04"
 categories: linux
 tags: linux how-to kubernetes ubuntu microk8s
 ---
 
-How to setup MicroK8s cluster on Ubuntu 21.04
+How to setup MicroK8s cluster on Ubuntu 22.04
 
 ## 1. Install MicroK8s and Kubectl
 
@@ -43,7 +43,6 @@ microk8s kubectl get nodes
 microk8s kubectl get pods -A
 
 ```
-
 
 ## 5. Setup Dashboard
 
@@ -109,4 +108,4 @@ microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:
 
 ## 7. Access the Dashboard
 
-https://127.0.0.1:10443/
+<https://127.0.0.1:10443/>
