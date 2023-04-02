@@ -47,14 +47,15 @@ microk8s kubectl get pods -A
 ## 5. Setup Dashboard
 
 ```bash
-# Enable Dashboard Addon
+# Enable Addons
 microk8s enable dashboard
 
+# Create Default token
+microk8s kubectl create token default
+
+## OPTIONAL - Use RBAC
 # Enable RBAC Addon
 microk8s enable rbac
-
-# Enable Ingress Addon
-microk8s enable ingress
 
 # Create the Admin user: dashboard-adminuser.yaml
 cd ~
@@ -108,4 +109,4 @@ microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:
 
 ## 7. Access the Dashboard
 
-<https://127.0.0.1:10443/>
+<https://IP:10443/>
