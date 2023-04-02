@@ -1,6 +1,4 @@
-
 ---
-
 title: Configure GitHub creds for VSCode
 categories: android
 tags: android root oneplus 9pro
