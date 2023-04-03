@@ -14,36 +14,38 @@ Make sure to have over 6Gb RAM and 4CPUs! AWX won't install properly otherwise.
 ## 2. Enable Required AddOns
 
 ```bash
-microk8s enable dns storage ingress rbac
+microk8s enable dns hostpath-storage ingress rbac helm
 ```
 
 ## 3. Install AWX Operator
 
 ```bash
-# Dependencies
-sudo apt-get install -y git make
+microk8s helm repo add awx-operator https://ansible.github.io/awx-operator/
+microk8s helm repo update
+microk8s helm install -n awx --create-namespace awx awx-operator/awx-operator
 
-# Get latest release
-cd ~
-git clone https://github.com/ansible/awx-operator.git
-cd awx-operator
-git checkout 1.1.1
+# Output
+NAME: awx
+LAST DEPLOYED: Mon Apr  3 00:07:39 2023
+NAMESPACE: awx
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+AWX Operator installed with Helm Chart version 1.4.0
 
-# Deploy AWX Operator
-export NAMESPACE=awx
-make deploy
-
-# Check if running
-kubectl get pods -n $NAMESPACE
+# Check status
+kubectl get pods -n awx
+kubectl get pods -A
 ```
 
 ## 4. Install AWX
 
 ```bash
 # Switch to the AWX namespace
-kubectl config set-context --current --namespace=$NAMESPACE
+kubectl config set-context --current --namespace=awx
 
-# Create configuration and apply
+# Create AWX configuration and apply
 cd ~
 cat << EOF > awx.yaml
 ---
@@ -66,18 +68,17 @@ Wait until all 6 AWX pods are ready, takes a couple of minutes.
 
 ```bash
 # Check status of pods
-kubectl get pods -n $NAMESPACE
+kubectl get pods -n awx
 ```
 
 Example:
 
 ```bash
-ansible@microk8s:~$ kubectl get --all-namespaces pods
-NAMESPACE     NAME                                               READY   STATUS    RESTARTS   AGE
-awx           awx-operator-controller-manager-5cdb6dd6cb-25ftr   2/2     Running   0          11m
-awx           awx-7d4f664875-v7qk2                               0/4     Pending   0          64s
-awx           awx-postgres-0                                     1/1     Running   0          73s
-
+ansible@kube:~$ kubectl get pods -n awx
+NAME                                               READY   STATUS            RESTARTS   AGE
+awx-operator-controller-manager-5678bcf484-snqnk   2/2     Running           0          4m10s
+awx-postgres-13-0                                  1/1     Running           0          107s
+awx-96d4765c-rz8n4                                 0/4     PodInitializing   0          62s
 ```
 
 ## 5. Port Forward
@@ -86,8 +87,20 @@ awx           awx-postgres-0                                     1/1     Running
 # Find the Port/IP
 kubectl get service -A
 
+# Output
+ansible@kube:~$ kubectl get service -A
+NAMESPACE     NAME                                              TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE
+default       kubernetes                                        ClusterIP   10.152.183.1     <none>        443/TCP                  9m58s
+kube-system   metrics-server                                    ClusterIP   10.152.183.66    <none>        443/TCP                  7m56s
+kube-system   kubernetes-dashboard                              ClusterIP   10.152.183.76    <none>        443/TCP                  7m52s
+kube-system   dashboard-metrics-scraper                         ClusterIP   10.152.183.207   <none>        8000/TCP                 7m52s
+kube-system   kube-dns                                          ClusterIP   10.152.183.10    <none>        53/UDP,53/TCP,9153/TCP   7m23s
+awx           awx-operator-controller-manager-metrics-service   ClusterIP   10.152.183.21    <none>        8443/TCP                 6m26s
+awx           awx-postgres-13                                   ClusterIP   None             <none>        5432/TCP                 3m24s
+awx           awx-service                                       NodePort    10.152.183.67    <none>        80:31589/TCP             2m42s
+
 # Port Forward (Optional)
-microk8s kubectl port-forward -n awx service/awx-service 31850:80 --address 0.0.0.0 &> /dev/null &
+microk8s kubectl port-forward -n awx service/awx-service 31589:80 --address 0.0.0.0 &> /dev/null &
 
 ```
 
