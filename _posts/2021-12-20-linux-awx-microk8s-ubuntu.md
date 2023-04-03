@@ -111,4 +111,4 @@ microk8s kubectl port-forward -n awx service/awx-service 31589:80 --address 0.0.
 echo Username: admin$'\n'Password: `kubectl  get secret awx-admin-password -o jsonpath='{.data.password}' | base64 --decode`
 ```
 
-Login: <http://x.x.x.x:30080>
+Login: <http://x.x.x.x:31589>
