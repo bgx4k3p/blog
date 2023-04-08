@@ -1,14 +1,15 @@
 ---
-title: Install AWX with MicroK8s Cluster on Ubuntu 22.04
+title: Install AWX with MicroK8s Cluster on Ubuntu Server
 categories: linux
 tags: linux awx kubernetes cluster microk8s ubuntu helm
 ---
 
-How to install MicroK8s and Kubectl on Ubuntu 22.04
+How to install MicroK8s and Kubectl on Ubuntu Server
 
 ## 1. Prerequisites
 
-Make sure to have over 6Gb RAM and 4CPUs! AWX won't install properly otherwise.
+- Ubuntu Server with MicroK8s cluster: <https://bgx4k3p.github.io/blog/linux/2021/12/24/kubernetes-microk8s-ubuntu.html>
+- Make sure to have over 6Gb RAM and 4CPUs! AWX won't install properly otherwise.
 
 ## 2. Enable Required AddOns
 
