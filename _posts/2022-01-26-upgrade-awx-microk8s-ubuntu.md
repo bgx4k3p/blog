@@ -1,67 +1,87 @@
 ---
 title: "Upgrade AWX on MicroK8s cluster"
 categories: linux
-tags: awx linux how-to kubernetes ubuntu microk8s
+tags: awx linux how-to kubernetes ubuntu microk8s helm
 ---
 
 How to upgrade AWX with MicroK8s clusters on Ubuntu 22.04
 
-## 1. Pull the Latest AWX Operator
+## 1. Prerequisites
 
-Find the latest version of AWX Operator: <https://github.com/ansible/awx-operator/releases>
+- Set up MicroK8S cluster: <https://bgx4k3p.github.io/blog/linux/2021/12/24/kubernetes-microk8s-ubuntu.html>
+- Install AWX: <https://bgx4k3p.github.io/blog/linux/2021/12/20/linux-awx-microk8s-ubuntu.html>
+
+## 2. Pull the Latest Helm chart
+
+- Find the latest version of AWX: <https://github.com/ansible/awx>
+- Find the latest version of AWX Operator: <https://github.com/ansible/awx-operator/releases>
+- Find the latest version of Helm chart:<https://artifacthub.io/packages/helm/awx-operator/awx-operator>
 
 ```bash
-# Pull the latest version from GIT
-cd ~/awx-operator
-git pull
-git checkout 0.24.0
+# Update helm repos
+ansible@kube:~$ microk8s helm repo update
+
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "awx-operator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+
+# Check current installed version
+ansible@kube:~$ microk8s helm list -A
+
+NAME NAMESPACE REVISION UPDATED                                 STATUS   CHART              APP VERSION
+awx  awx       1        2023-04-04 01:50:49.715016633 +0000 UTC deployed awx-operator-1.4.0 1.4.0   
+
+# Check latest version in repo
+ansible@kube:~$ microk8s helm search repo awx-operator
+
+NAME                      CHART VERSION APP VERSION DESCRIPTION                      
+awx-operator/awx-operator 2.0.0         2.0.0       A Helm chart for the AWX Operator
 ```
 
-## 2. Upgrade AWX Operator
+## 3. Upgrade AWX Operator
+
+Helm charts make the install and upgrade very easy.
 
 ```bash
-# Switch to the correct namespace
-export NAMESPACE=awx
+# Switch to the AWX namespace
+ansible@kube:~$ kubectl config set-context --current --namespace=awx
 
-# Deploy
-ansible@microk8s:~/awx-operator$ make deploy
+# Upgrade with Helm
+ansible@kube:~$ microk8s helm upgrade -n awx --create-namespace awx awx-operator/awx-operator
+
+Release "awx" has been upgraded. Happy Helming!
+NAME: awx
+LAST DEPLOYED: Sat Apr  8 14:06:05 2023
+NAMESPACE: awx
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+NOTES:
+AWX Operator installed with Helm Chart version 2.0.0
+
+# Check installed version
+ansible@kube:~$ microk8s helm list -A
+
+NAME NAMESPACE REVISION UPDATED                                 STATUS   CHART              APP VERSION
+awx  awx       2        2023-04-08 14:06:05.528617359 +0000 UTC deployed awx-operator-2.0.0 2.0.0      
 ```
 
-Example results:
+## 4. Check AWX
+
+AWX Operator will upgrade AWX Tower automatically. It is important to have enough CPU and Memory for the upgrade to work. Recommended 16Gb RAM and 6 CPU cores. The AWX data will be migrate automatically and the old pods will be terminated. Check the version under Help-About and it should show the latest.
 
 ```bash
-namespace/awx unchanged
-customresourcedefinition.apiextensions.k8s.io/awxbackups.awx.ansible.com unchanged
-customresourcedefinition.apiextensions.k8s.io/awxrestores.awx.ansible.com unchanged
-customresourcedefinition.apiextensions.k8s.io/awxs.awx.ansible.com configured
-serviceaccount/awx-operator-controller-manager unchanged
-role.rbac.authorization.k8s.io/awx-operator-awx-manager-role configured
-role.rbac.authorization.k8s.io/awx-operator-leader-election-role unchanged
-clusterrole.rbac.authorization.k8s.io/awx-operator-metrics-reader unchanged
-clusterrole.rbac.authorization.k8s.io/awx-operator-proxy-role unchanged
-rolebinding.rbac.authorization.k8s.io/awx-operator-awx-manager-rolebinding unchanged
-rolebinding.rbac.authorization.k8s.io/awx-operator-leader-election-rolebinding unchanged
-clusterrolebinding.rbac.authorization.k8s.io/awx-operator-proxy-rolebinding unchanged
-configmap/awx-operator-awx-manager-config unchanged
-service/awx-operator-controller-manager-metrics-service unchanged
-deployment.apps/awx-operator-controller-manager configured
-```
+ansible@kube:~$ kubectl get pods -n awx
 
-## 3. Check AWX
-
-AWX Operator will upgrade AWX Tower automatically. It is important to have enough CPU and Memory for the upgrade to work. Recommended 16Gb RAM and 6 CPU cores. The AWX data will be migrate automatically and the old pods will be terminated.
-
-```bash
-ansible@microk8s:~/awx-operator$ kubectl get pods -n $NAMESPACE
-NAME                                               READY   STATUS            RESTARTS       AGE
-awx-postgres-0                                     1/1     Running           20 (15d ago)   63d
-awx-75486fdfb8-m2l9q                               4/4     Running           20 (15d ago)   23d
-awx-operator-controller-manager-775b5cfc56-r6f6m   2/2     Running           0              75s
-awx-6976457bd5-4gcqn                               0/4     PodInitializing   0              25s
+NAME                                               READY   STATUS    RESTARTS   AGE
+awx-postgres-13-0                                  1/1     Running   0          5d13h
+awx-operator-controller-manager-77c67f9445-p65nq   2/2     Running   0          4m2s
+awx-task-674967f876-njq2m                          4/4     Running   0          2m44s
+awx-web-6bb95678b6-d2wmh                           3/3     Running   0          2m18s
 ```
 
 Optional: Open another terminal to monitor the install live
 
 ```bash
-kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
+ansible@kube:~$ kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 ```

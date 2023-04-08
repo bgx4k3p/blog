@@ -1,9 +1,8 @@
 ---
 title: Install AWX with MicroK8s Cluster on Ubuntu 22.04
 categories: linux
-tags: linux awx kubernetes cluster microk8s ubuntu
+tags: linux awx kubernetes cluster microk8s ubuntu helm
 ---
-
 
 How to install MicroK8s and Kubectl on Ubuntu 22.04
 
@@ -14,15 +13,17 @@ Make sure to have over 6Gb RAM and 4CPUs! AWX won't install properly otherwise.
 ## 2. Enable Required AddOns
 
 ```bash
-microk8s enable dns hostpath-storage ingress rbac helm
+ansible@kube:~$ microk8s enable dns hostpath-storage ingress rbac helm
 ```
 
 ## 3. Install AWX Operator
 
+AWX Operator installs AWX and PostgreSQL container automatically. Helm charts make the install and upgrade very easy.
+
 ```bash
-microk8s helm repo add awx-operator https://ansible.github.io/awx-operator/
-microk8s helm repo update
-microk8s helm install -n awx --create-namespace awx awx-operator/awx-operator
+ansible@kube:~$ microk8s helm repo add awx-operator https://ansible.github.io/awx-operator/
+ansible@kube:~$ microk8s helm repo update
+ansible@kube:~$ microk8s helm install -n awx --create-namespace awx awx-operator/awx-operator
 
 # Output
 NAME: awx
@@ -35,19 +36,19 @@ NOTES:
 AWX Operator installed with Helm Chart version 1.4.0
 
 # Check status
-kubectl get pods -n awx
-kubectl get pods -A
+ansible@kube:~$ kubectl get pods -n awx
+ansible@kube:~$ kubectl get pods -A
 ```
 
 ## 4. Install AWX
 
 ```bash
 # Switch to the AWX namespace
-kubectl config set-context --current --namespace=awx
+ansible@kube:~$ kubectl config set-context --current --namespace=awx
 
 # Create AWX configuration and apply
-cd ~
-cat << EOF > awx.yaml
+ansible@kube:~$ cd ~
+ansible@kube:~$ cat << EOF > awx.yaml
 ---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
@@ -57,10 +58,10 @@ spec:
   service_type: nodeport
 EOF
 
-kubectl apply -f awx.yaml
+ansible@kube:~$ kubectl apply -f awx.yaml
 
 # Optional: Open another terminal to monitor the install
-kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
+ansible@kube:~$ kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 
 ```
 
@@ -68,7 +69,7 @@ Wait until all 6 AWX pods are ready, takes a couple of minutes.
 
 ```bash
 # Check status of pods
-kubectl get pods -n awx
+ansible@kube:~$ kubectl get pods -n awx
 ```
 
 Example:
@@ -85,10 +86,11 @@ awx-96d4765c-rz8n4                                 0/4     PodInitializing   0  
 
 ```bash
 # Find the Port/IP
-kubectl get service -A
+ansible@kube:~$ kubectl get service -A
 
 # Output
 ansible@kube:~$ kubectl get service -A
+
 NAMESPACE     NAME                                              TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE
 default       kubernetes                                        ClusterIP   10.152.183.1     <none>        443/TCP                  9m58s
 kube-system   metrics-server                                    ClusterIP   10.152.183.66    <none>        443/TCP                  7m56s
@@ -100,7 +102,7 @@ awx           awx-postgres-13                                   ClusterIP   None
 awx           awx-service                                       NodePort    10.152.183.67    <none>        80:31589/TCP             2m42s
 
 # Port Forward (Optional)
-microk8s kubectl port-forward -n awx service/awx-service 31589:80 --address 0.0.0.0 &> /dev/null &
+ansible@kube:~$ microk8s kubectl port-forward -n awx service/awx-service 31589:80 --address 0.0.0.0 &> /dev/null &
 
 ```
 
@@ -108,7 +110,7 @@ microk8s kubectl port-forward -n awx service/awx-service 31589:80 --address 0.0.
 
 ```bash
 # Get the Admin password
-echo Username: admin$'\n'Password: `kubectl  get secret awx-admin-password -o jsonpath='{.data.password}' | base64 --decode`
+ansible@kube:~$ echo Username: admin$'\n'Password: `kubectl  get secret awx-admin-password -o jsonpath='{.data.password}' | base64 --decode`
 ```
 
 Login: <http://x.x.x.x:31589>
