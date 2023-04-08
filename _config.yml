@@ -56,7 +56,6 @@ plugins:
   - jekyll-readme-index
   - jekyll-default-layout
   - jekyll-titles-from-headings
-  - jekyll-remote-theme
 
 # Disable RSS
 atom_feed:
