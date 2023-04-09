@@ -13,8 +13,8 @@ paginate: true
 
 ## 1. Prerequisites
 
-- Set up MicroK8S cluster: <https://bgx4k3p.github.io/blog/linux/2021/12/24/kubernetes-microk8s-ubuntu.html>
-- Install AWX: <https://bgx4k3p.github.io/blog/linux/2021/12/20/linux-awx-microk8s-ubuntu.html>
+- Set up MicroK8S cluster: <https://bgx4k3p.github.io/blog/kubernetes-microk8s-ubuntu>
+- Install AWX: <https://bgx4k3p.github.io/blog/linux-awx-microk8s-ubuntu>
 
 ## 2. Pull the Latest Helm chart
 
