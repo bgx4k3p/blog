@@ -78,7 +78,7 @@ two_columns_layout: true
 
 # Advanced Settings
 #google_analytics: "UA-XXXXXXXX-X"
-google_analytics: "G-HP7XX1PBQ9"
+#google_analytics: "G-HP7XX1PBQ9"
 
 # Build settings
 remote_theme: thiagorossener/jekflix-template
