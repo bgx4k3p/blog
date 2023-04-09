@@ -2,16 +2,14 @@
 date: 2019-04-22 12:26
 layout: post
 title: Random Password Generator
-subtitle: Add color prompt, commands autocomplete and aliases for BASH shell
-description: Add color prompt, commands autocomplete and aliases for BASH shell on Ubuntu. This is a time saver if you tend to build and re-build your servers all the time, like in a home lab.
+subtitle: Bash one-liner
+description: Quick script to generate random passwords.
 image: https://bgx4k3p.github.io/blog/assets/img/code-large.jpg
 category: linux
 tags: linux ubuntu bash
 author: bgx4k3p
 paginate: true
 ---
-
-Quick script to generate random passwords
 
 ## Use Bash function (for learning purposes)
 
