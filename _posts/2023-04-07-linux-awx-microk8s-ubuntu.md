@@ -11,6 +11,8 @@ author: bgx4k3p
 paginate: true
 ---
 
+AWX Tower is a free, open-source automation tool for managing Ansible playbooks, inventories, and workflows. It simplifies the management of Ansible by providing a centralized dashboard for organizing, scheduling, and monitoring Ansible jobs across multiple environments. In this post, I'll show you how to set up your very own AWX tower with Kubernetes cluster using Ubuntu and MicroK8s and Helm, all for free!
+
 ## 1. Prerequisites
 
 - Ubuntu Server with MicroK8s cluster: <https://bgx4k3p.github.io/blog/kubernetes-microk8s-ubuntu>
@@ -24,7 +26,7 @@ ansible@kube:~$ microk8s enable dns hostpath-storage ingress rbac helm
 
 ## 3. Install AWX Operator
 
-AWX Operator installs AWX and PostgreSQL container automatically. Helm charts make the install and upgrade very easy.
+AWX Operator is a Kubernetes native operator that automates the deployment and management of AWX Tower. It simplifies the process of installing and upgrading AWX Tower by providing an automated, self-contained deployment that can be easily managed through Kubernetes. To make it even easier, we'll use Helm chart to install AWX operator automatically. Helm chart is a package manager for Kubernetes that provides an easy way to install, upgrade, and manage Kubernetes applications.
 
 ```bash
 ansible@kube:~$ microk8s helm repo add awx-operator https://ansible.github.io/awx-operator/
@@ -120,3 +122,7 @@ ansible@kube:~$ echo Username: admin$'\n'Password: `kubectl  get secret awx-admi
 ```
 
 Login: <http://x.x.x.x:31589>
+
+And that's it! You've just created your very own AWX Tower using Ubuntu, MicroK8s and Helm, all for free! Now you can experiment with different Ansible playbooks and have a blast exploring the world of automation. There are endless of resources online with any playbook you can think of. If you need help to get started, these are the few that I use to manage my home lab, laptops and raspberry Pis: <https://github.com/bgx4k3p/ansible-playbooks>.
+
+Happy coding!
