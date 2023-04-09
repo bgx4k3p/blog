@@ -11,7 +11,7 @@ author: bgx4k3p
 paginate: true
 ---
 
-Welcome to the wonderful world of Kubernetes, where the sky's the limit and the possibilities are endless! If you're looking to create your own Kubernetes cluster without breaking the bank, you've come to the right place. In this blog post, we'll show you how to set up your very own Kubernetes cluster using Ubuntu and MicroK8s, all for free!
+Hey there, welcome to my blog post about creating your own Kubernetes cluster for free! If you're like me and want to experiment with Kubernetes without breaking the bank, then you're in the right place. In this post, I'll show you how to set up your very own Kubernetes cluster using Ubuntu and MicroK8s, all for free!
 
 First things first, let's talk about Kubernetes. It's a powerful open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Basically, it's like having your own personal army of robots that take care of all your container-related tasks, so you can sit back and relax.
 
@@ -141,6 +141,6 @@ After grabbing the token, open a browser and point to the server IP and port you
 
 <https://IP:10443/>
 
-And that's it! You've just created your very own Kubernetes cluster using Ubuntu and MicroK8s, all for free! Now you can experiment with different deployments, try out different Kubernetes add-ons, and have a blast exploring the world of containerization. Remember, Kubernetes may seem daunting at first, but with a little patience and a lot of trial and error, you'll be a Kubernetes pro in no time. 
+And that's it! You've just created your very own Kubernetes cluster using Ubuntu and MicroK8s, all for free! Now you can experiment with different deployments, try out different Kubernetes add-ons, and have a blast exploring the world of containerization. Remember, Kubernetes may seem daunting at first, but with a little patience and a lot of trial and error, you'll be a Kubernetes pro in no time.
 
 Happy coding!
