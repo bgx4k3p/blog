@@ -23,8 +23,9 @@
 name: bgx4k3p
 title: bgx4k3p | Every day is a chance to learn!
 description: Blog
-baseurl: "/blog"
-url: "https://bgx4k3p.github.io"
+#baseurl: "/blog"
+baseurl: ""
+url: "https://bgx4k3p.github.io/blog"
 language: "en"
 locale: "en-US"
 timezone: America/New_York
