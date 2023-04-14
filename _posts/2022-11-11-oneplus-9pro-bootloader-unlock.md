@@ -4,7 +4,7 @@ layout: post
 title: OnePlus 9 Pro - Bootloader Unlock
 subtitle: How to unlock bootloader on OnePlus 9 Pro device
 description: Step by step instructions for rooting OnePlus 9 Pro device for penetration testing or other purposes.
-image: https://bgx4k3p.github.io/test/assets/img/oneplus.jpg
+image: https://bgx4k3p.github.io/blog/assets/img/oneplus.jpg
 category: android
 tags: android root oneplus-9 unlock
 author: bgx4k3p

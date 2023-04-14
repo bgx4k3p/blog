@@ -4,7 +4,7 @@ layout: post
 title: Install AWX with Minikube on Ubuntu Server
 subtitle: How-to
 description: How to setup Minicube cluster on on Ubuntu 21.04.
-image: https://bgx4k3p.github.io/test/assets/img/awx-large.png
+image: https://bgx4k3p.github.io/blog/assets/img/awx-large.png
 category: linux
 tags: linux awx ansible kubernetes minicube
 author: bgx4k3p

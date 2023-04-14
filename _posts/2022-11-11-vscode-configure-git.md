@@ -4,7 +4,7 @@ layout: post
 title: Configure GitHub creds
 subtitle: Quick notes
 description: Set up terminal credentials GitHub.
-image: https://bgx4k3p.github.io/test/assets/img/bash.jpg
+image: https://bgx4k3p.github.io/blog/assets/img/bash.jpg
 category: linux
 tags: git bash vscode
 author: bgx4k3p

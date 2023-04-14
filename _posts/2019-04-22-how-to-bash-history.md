@@ -4,7 +4,7 @@ layout: post
 title: Dedup BASH History
 subtitle: Quick notes
 description: One-liner to dedup Bash History.
-image: https://bgx4k3p.github.io/test/assets/img/bash.jpg
+image: https://bgx4k3p.github.io/blog/assets/img/bash.jpg
 category: linux
 tags: linux ubuntu bash
 author: bgx4k3p
