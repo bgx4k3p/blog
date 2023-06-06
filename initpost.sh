@@ -46,7 +46,7 @@ POSTPATH="${BINPATH}/_posts"
 DIST_FOLDER="$POSTPATH"
 
 # Set your blog URL
-BLOG_URL="https://jekflix.rossener.com/"
+BLOG_URL="https://bgx4k3p.github.io/blog/"
 
 # Set your assets URL
 ASSETS_URL="assets/img/"
@@ -113,14 +113,14 @@ echo "---"
 echo "date: ${CURRENT_DATE} ${TIME}"
 echo "layout: post"
 echo "title: \"${POST_TITLE}\""
-echo "subtitle:"
+echo "subtitle: How-to"
 echo "description:"
-echo "image:"
+echo "image: <https://bgx4k3p.github.io/blog/assets/img/bash.jpg>"
 echo "optimized_image:"
 echo "category:"
 echo "tags:"
-echo "author:"
-echo "paginate: false"
+echo "author: bgx4k3p"
+echo "paginate: true"
 echo "---"
 
 }
