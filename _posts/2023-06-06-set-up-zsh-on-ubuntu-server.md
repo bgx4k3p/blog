@@ -1,10 +1,10 @@
 ---
-date: 2023-06-06 01:44:41
+date: 2023-06-06 01:44
 layout: post
 title: "Customize ZSH on Ubuntu Server"
 subtitle: How-to
 description: Step by step instructions to set up ZSH on Ubuntu and other Debian OS
-image: <https://bgx4k3p.github.io/blog/assets/img/bash.jpg>
+image: https://bgx4k3p.github.io/blog/assets/img/bash.jpg
 optimized_image:
 category: linux
 tags: ubuntu linux zsh
