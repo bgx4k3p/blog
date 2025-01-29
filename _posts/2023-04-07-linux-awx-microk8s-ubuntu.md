@@ -121,8 +121,6 @@ ansible@kube:~$ microk8s kubectl port-forward -n awx service/awx-service 31589:8
 ansible@kube:~$ echo Username: admin$'\n'Password: `kubectl  get secret awx-admin-password -o jsonpath='{.data.password}' | base64 --decode`
 ```
 
-Login: <http://x.x.x.x:31589>
-
-And that's it! You've just created your very own AWX Tower using Ubuntu, MicroK8s and Helm, all for free! Now you can experiment with different Ansible playbooks and have a blast exploring the world of automation. There are endless of resources online with any playbook you can think of. If you need help to get started, these are the few that I use to manage my home lab, laptops and raspberry Pis: <https://github.com/bgx4k3p/ansible-playbooks>.
+And that's it, just login on port 31589! You've just created your very own AWX Tower using Ubuntu, MicroK8s and Helm, all for free! Now you can experiment with different Ansible playbooks and have a blast exploring the world of automation. There are endless of resources online with any playbook you can think of. If you need help to get started, these are the few that I use to manage my home lab, laptops and raspberry Pis: <https://github.com/bgx4k3p/ansible-playbooks>.
 
 Happy coding!

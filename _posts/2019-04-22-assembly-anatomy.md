@@ -4,7 +4,7 @@ layout: post
 title: HLA Program template
 subtitle: Quick notes
 description: Anatomy of an HLA Program
-image: https://bgx4k3p.github.io/blog/assets/img/assembly.png
+image: /assets/img/assembly.png
 category: linux
 tags: assembly
 author: bgx4k3p
