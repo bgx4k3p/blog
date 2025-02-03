@@ -4,10 +4,9 @@ layout: post
 title: Install AWX with MicroK8s cluster on Ubuntu Server
 subtitle: How-to
 description: Step by step instructions to set up AWX Tower for running automated Ansible playbooks and server administration.
-image: https://bgx4k3p.github.io/blog/assets/img/awx-large.png
+image: /assets/img/awx-large.png
 category: linux
 tags: linux awx ansible kubernetes helm microk8s
-author: bgx4k3p
 paginate: true
 ---
 

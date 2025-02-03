@@ -7,7 +7,6 @@ description: Anatomy of an HLA Program
 image: /assets/img/assembly.png
 category: linux
 tags: assembly
-author: bgx4k3p
 paginate: true
 ---
 

@@ -4,10 +4,9 @@ layout: post
 title: Set up Python 3.11 as default on MacOS
 subtitle: How-to
 description: Step by step instructions to set up Python 3.11 as the default on MacOS.
-image: https://bgx4k3p.github.io/blog/assets/img/bash.jpg
+image: /assets/img/bash.jpg
 category: macos
 tags: macos python
-author: bgx4k3p
 paginate: true
 ---
 
