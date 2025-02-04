@@ -46,6 +46,10 @@ social:
     #- https://twitter.com/username # change to your Twitter homepage
     # - https://www.facebook.com/username
 
+plugins:
+  # - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Site Verification Settings
 webmaster_verifications:
