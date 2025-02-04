@@ -47,9 +47,9 @@ social:
     # - https://www.facebook.com/username
 
 plugins:
-  # - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jemoji
 
 # Site Verification Settings
 webmaster_verifications:
