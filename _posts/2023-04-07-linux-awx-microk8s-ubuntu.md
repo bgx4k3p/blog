@@ -14,7 +14,7 @@ AWX Tower is a free, open-source automation tool for managing Ansible playbooks,
 
 ## 1. Prerequisites
 
-- Ubuntu Server with MicroK8s cluster: <https://bgx4k3p.github.io/blog/kubernetes-microk8s-ubuntu>
+- Ubuntu Server with MicroK8s cluster: <https://bgx4k3p.github.io/blog/posts/kubernetes-microk8s-ubuntu/>
 - Make sure to have over 6Gb RAM and 4CPUs! AWX won't install properly otherwise.
 
 ## 2. Enable Required AddOns
