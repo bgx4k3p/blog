@@ -28,3 +28,6 @@ assets/js/dist
 
 # MacOS
 **/.DS_Store
+
+# Skip
+_posts/2025-02-03-jekyll-chirpy-cheetsheet.md
