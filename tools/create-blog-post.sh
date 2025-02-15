@@ -27,7 +27,7 @@ date: ${current_date}
 title: $input_title
 description: 
 image: /assets/img/bash.jpg
-category: linux
+category: Linux
 tags: []
 paginate: true
 ---
