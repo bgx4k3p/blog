@@ -5,8 +5,8 @@ title: Setup MicroK8s cluster on Ubuntu Server
 subtitle: How-to
 description: Step by step instructions to set MicroK8s cluster on Ubuntu 22.04.
 image: /assets/img/awx-large.png
-category: linux
-tags: linux awx ansible kubernetes helm microk8s
+category: Linux
+tags: [Linux, AWX, Ansible, Kubernetes, Helm, MicroK8s]
 paginate: true
 ---
 

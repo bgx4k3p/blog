@@ -5,8 +5,8 @@ title: Customize ZSH on Ubuntu Server
 subtitle: How-to
 description: Step by step instructions to set up ZSH on Ubuntu and other Debian OS
 image: /assets/img/bash.jpg
-category: linux
-tags: linux zsh
+category: Linux
+tags: [Linux, Shell]
 paginate: true
 ---
 

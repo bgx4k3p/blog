@@ -5,8 +5,8 @@ title: Install ESXi updates from command line
 subtitle: Quick notes
 description: How to install ESXi updates from command line
 image: /assets/img/esxi.jpg
-category: linux
-tags: vmware esxi
+category: Linux
+tags: [VMware, ESXi]
 paginate: true
 ---
 

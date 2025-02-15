@@ -5,8 +5,8 @@ title: OnePlus 9 Pro - Bootloader Unlock
 subtitle: How to unlock bootloader on OnePlus 9 Pro device
 description: Step by step instructions for rooting OnePlus 9 Pro device for penetration testing or other purposes.
 image: /assets/img/oneplus.jpg
-category: android
-tags: android jailbreak oneplus-9 unlock
+category: Android
+tags: [Android, Jailbreak, OnePlus]
 ---
 
 ## Step 1. Install Android tools
@@ -24,15 +24,14 @@ brew install --cask android-platform-tools
 2. Now go to **> System  > Developer options** > enable **OEM Unlocking** and **USB debugging**.
 3. Make sure your PC is authorized when you plugin the USB cable.
 
-
 ## Step 3. Get your IMEI
 
 Get your phone’s IMEI by dialing ***#06#** in the phone’s dialer. The IMEI code will show up. You will need this for T-Mobile’s form later on.
 
-
 ## Step 4. Get your unlock code
 
 1. Reboot into fastboot mode
+
 ```bash
 adb reboot bootloader
 ```
@@ -54,9 +53,11 @@ MacBook:~$ fastboot oem get_unlock_code
 (bootloader) 00F5147972F8B93DCA6E7B8AC3XXXXXX
 (bootloader) ====================================
 ```
+
 3. Combine the 2 lines into one long string
 
-Example Unlock code:  
+Example Unlock code:
+
 ```bash
 8B9D3B46A02677526B7953A8A2F6356700F5147972F8B93DCA6E7B8AC3XXXXXX
 ```
@@ -65,18 +66,20 @@ Example Unlock code:
 
 This is where you will need to enter your IMEI code and your unlock code (2 lines as one long code). Once you submit it, you should receive a flashable unlock token within two weeks.
 
-https://www.oneplus.com/unlock_token
-
+<https://www.oneplus.com/unlock_token>
 
 ## Step 6. OEM Bootloader Unlock
 
 **Warning!** Unlocking the bootloader will reset/erase your device. Back up first if anything important.
 
 1. Reboot in Fastboot mode
+
 ```bash
 adb reboot bootloader
 ```
+
 2. Flash the Unlock token bin
+
 ```bash
 fastboot flash cust-unlock unlock_code.bin 
 
@@ -95,10 +98,10 @@ OKAY [  0.034s]
 Finished. Total time: 0.034s
 ```
 
-
 ## References
 
-### Guides: 
+### Guides:
+
 [https://www.oneplus.com/support/answer/detail/op588](https://www.oneplus.com/support/answer/detail/op588)
 
 ###  Unbrick
@@ -109,4 +112,3 @@ Finished. Total time: 0.034s
 
 ### OEM Unlocking Grayed out
 [https://www.droidwin.com/enable-greyed-out-oem-unlock-in-oneplus-carrier-locked-t-mobile/#How_to_Enable_Greyed_out_OEM_Unlock_in_OnePlus_Carrier_Locked_T-Mobile](https://www.droidwin.com/enable-greyed-out-oem-unlock-in-oneplus-carrier-locked-t-mobile/#How_to_Enable_Greyed_out_OEM_Unlock_in_OnePlus_Carrier_Locked_T-Mobile)
-

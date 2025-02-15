@@ -5,8 +5,8 @@ title: Dedup BASH History
 subtitle: Quick notes
 description: One-liner to dedup Bash History.
 image: /assets/img/bash.jpg
-category: linux
-tags: linux ubuntu bash
+category: Linux
+tags: [Linux, Shell]
 paginate: true
 ---
 

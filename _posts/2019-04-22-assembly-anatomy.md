@@ -5,8 +5,8 @@ title: HLA Program template
 subtitle: Quick notes
 description: Anatomy of an HLA Program
 image: /assets/img/assembly.png
-category: linux
-tags: assembly
+category: Linux
+tags: [Assembly]
 paginate: true
 ---
 

@@ -5,8 +5,8 @@ title: Random Password Generator
 subtitle: Bash one-liner
 description: Quick script to generate random passwords.
 image: assets/img/code-large.jpg
-category: linux
-tags: linux ubuntu bash
+category: Linux
+tags: [Linux, Shell]
 paginate: true
 ---
 

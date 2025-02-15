@@ -5,8 +5,8 @@ title: Upgrade AWX with MicroK8s cluster on Ubuntu Server
 subtitle: How-to
 description: Step by step instructions to upgrade AWX with MicroK8s cluster on Ubuntu Server, using Helm chart.
 image: /assets/img/awx-large.png
-category: linux
-tags: linux awx ansible kubernetes helm microk8s
+category: Linux
+tags: [Linux, AWX, Ansible, Kubernetes, Helm, MicroK8s]
 paginate: true
 ---
 

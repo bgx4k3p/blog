@@ -5,8 +5,8 @@ title: Create Ansible User for AWX Tower
 subtitle: How-to
 description: Quick guide to add new SSH user for using with Ansible AWX playbooks.
 image: /assets/img/awx-large.png
-category: linux
-tags: linux awx ansible kubernetes helm microk8s
+category: Linux
+tags: [Linux, AWX, Ansible, Kubernetes, Helm, MicroK8s]
 paginate: true
 ---
 
